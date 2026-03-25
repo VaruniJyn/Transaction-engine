@@ -40,14 +40,14 @@ It supports secure PIN validation, transaction processing, and transaction histo
 
 ## Setup & Run
 
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/transaction-engine.git
 cd transaction-engine
 ```
 
-### Run the server
+### 2. Run the server
 
 ```bash
 go run .
@@ -63,7 +63,7 @@ http://localhost:8080
 
 ## API Endpoints
 
-### Process Transaction
+### 1. Process Transaction
 
 **POST** `/api/transaction`
 
@@ -96,13 +96,13 @@ http://localhost:8080
 
 ---
 
-### Get Balance
+### 2. Get Balance
 
 **GET** `/api/card/balance/{cardNumber}`
 
 #### Example:
 
-```bash
+```
 http://localhost:8080/api/card/balance/4123456789012345
 ```
 
@@ -117,13 +117,13 @@ http://localhost:8080/api/card/balance/4123456789012345
 
 ---
 
-### Get Transaction History
+### 3. Get Transaction History
 
 **GET** `/api/card/transactions/{cardNumber}`
 
 #### Example:
 
-```bash
+```
 http://localhost:8080/api/card/transactions/4123456789012345
 ```
 
@@ -144,11 +144,9 @@ http://localhost:8080/api/card/transactions/4123456789012345
 
 ---
 
-## API Testing
+## API Testing (Curl)
 
-### Using Curl
-
-#### Transaction API
+### Transaction API
 
 ```bash
 curl -X POST http://localhost:8080/api/transaction \
@@ -156,21 +154,21 @@ curl -X POST http://localhost:8080/api/transaction \
 -d '{"cardNumber":"4123456789012345","pin":"1234","type":"withdraw","amount":200}'
 ```
 
-#### Get Balance
+---
+
+### Get Balance
 
 ```bash
 curl http://localhost:8080/api/card/balance/4123456789012345
 ```
 
-#### Get Transaction History
+---
+
+### Get Transaction History
 
 ```bash
 curl http://localhost:8080/api/card/transactions/4123456789012345
 ```
-
-```
-
-7. Click **Send**
 
 ---
 
