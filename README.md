@@ -168,29 +168,6 @@ curl http://localhost:8080/api/card/balance/4123456789012345
 curl http://localhost:8080/api/card/transactions/4123456789012345
 ```
 
----
-
-### Using Postman
-
-1. Open Postman
-2. Create a new request
-3. Set method to **POST**
-4. URL:
-
-```
-http://localhost:8080/api/transaction
-```
-
-5. Go to **Body → raw → JSON**
-6. Paste:
-
-```json
-{
-  "cardNumber": "4123456789012345",
-  "pin": "1234",
-  "type": "withdraw",
-  "amount": 200
-}
 ```
 
 7. Click **Send**
